@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3498db; 
+    color: #020000; 
+    margin: 0;
+    padding: 0;     
+    text-align: center;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    background-image: url('النافورة.jpg'); /* تغيير الصورة الخلفية */
+    background-repeat: no-repeat;
+    background-size: 2000px;
+}
+.container, .course {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.course input,
+.course select,
+.course button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+.course {
+    margin-bottom: 10px;
+}
+.result-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.result-box {
+    background-color: #3498db; /* درجة أزرق مناسبة */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+#semesterGPAResult, #cumulativeGPAResult {
+    font-size: 1.5em;
+}
+button {
+    font-size: 1.2em;
+    background-color: #3498db; /* لون الخلفية الأزرق */
+    color: #ffffff; /* لون النص */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #2980b9; /* لون الخلفية عند التمرير */
+}
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+.social-media {
+    margin-top: 20px;
+}
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+}
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+.social-media a i {
+    font-size: 28px;
+    transition: color 0.3s ease;
+}
+.social-media a i:hover {
+    color: var(--secondary-color); /* تغيير لون الأيقونة عند التمرير */
+}
+@media screen and (max-width: 600px) {
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+.nav-links {
+    list-style: none;
+    padding: 0;
+    background-color: #020000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.nav-links li {
+    display: inline;
+    margin: 0 10px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+}
+.nav-links a i {
+    font-size: 24px;
+    transition: color 0.3s ease;
+    color: #3498db;
+}
+.nav-links a i:hover {
+    color: #2980b9;
+}
+.nav-links a:hover i {
+    color: #3409d1; 
+}
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+.imegaa {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.imegaa a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.imegaa a:hover {
+    color: #0056b3;
+}
+ul.imegaa a:hover {
+    text-decoration: underline;
+}
+.course .deleteCourse {
+    background-color: #e74c3c; /* لون الخلفية */
+    color: #fff; /* لون النص */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+.course .deleteCourse:hover {
+    background-color: #c0392b; /* لون الخلفية عند التمرير */
+}
+.notes-box {
+    top: 200px;
+    left: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.notes-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+.notes-box textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    resize: vertical;
+}
+.notes-box p {
+    font-size: 14px;
+    color: #555555;
+    margin-top: 10px;
+}
+#visitCountDisplay {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3498db;
+    margin-top: 10px;
+}
+.visitCount
+{
+color:#dddddd;
+}
