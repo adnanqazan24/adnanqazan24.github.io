@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="description"
+        content="Adnanqazan || 2024 <img src='https://raw.githubusercontent.com/ahmaddahb36/ahmaddahb36.github.io/main/%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%A7%D8%B3%D9%88%D8%AF%20%D9%85%D8%B9%20%D9%83%D8%AA%D8%A7%D8%A8%D8%A9.jpeg'>">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://raw.githubusercontent.com/ahmaddahb36/ahmaddahb36.github.io/main/%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%A7%D8%B3%D9%88%D8%AF%20%D9%85%D8%B9%20%D9%83%D8%AA%D8%A7%D8%A8%D8%A9.jpeg"
+        id="favicon32">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://raw.githubusercontent.com/ahmaddahb36/ahmaddahb36.github.io/main/%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%A7%D8%B3%D9%88%D8%AF%20%D9%85%D8%B9%20%D9%83%D8%AA%D8%A7%D8%A8%D8%A9.jpeg"
+        id="favicon16">
+    <link rel="apple-touch-icon"
+        href="https://raw.githubusercontent.com/ahmaddahb36/ahmaddahb36.github.io/main/%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%A7%D8%B3%D9%88%D8%AF%20%D9%85%D8%B9%20%D9%83%D8%AA%D8%A7%D8%A8%D8%A9.jpeg">
+    <meta charset="UTF-8">
+    <meta name="Adnan Qazan" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stayll.css" link>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="https://www.aabu.edu.jo/"><i class="fa fa-university"></i> موقع الجامعة</a></li>
+            <li><a href="https://aabu.site/newmoodle/"><i class="fa fa-book"></i> منصة مودل</a></li>
+            <li><a href="https://web2.aabu.edu.jo/nara/reg/MatProgram/mat_program_main.jsp "><i
+                        class="fa fa-newspaper-o"></i> جريدة المواد</a></li>
+            <li><a href="https://student.aabu.edu.jo/nreg/"><i class="fa fa-graduation-cap"></i> بوابة الطالب</a></li>
+            <img src="شعار اسود مع كتابة.jpeg" alt="" width="70px" height="70px">
+            <div id="visitCountDisplay"> </div>
+
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>
+            <p style="text-align: center;">
+                موقع النشامى</p>
+            <p> لحساب المعدل التراكمي من 4 </p>
+        </h1>
+        <div class="course">
+            <input type="number" placeholder="المعدل التراكمي السابق " class="previousGPA">
+            <input type="number" placeholder="عدد الساعات المقطوعة" class="completedHours">
+        </div>
+        <div id="courses">
+            <div class="course">
+                <select class="hours">
+                    <option value="">عدد الساعات </option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+
+                <select class="grade">
+                    <option value="4">A+</option>
+                    <option value="3.75">A</option>
+                    <option value="3.5">A-</option>
+                    <option value="3.25">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.75">B-</option>
+                    <option value="2.5">C+</option>
+                    <option value="2.25">C</option>
+                    <option value="2">C-</option>
+                    <option value="1.75">D+</option>
+                    <option value="1.5">D</option>
+                    <option value="0.75">F</option>
+                </select>
+                <select class="previousGrade">
+                    <option>الرمز السابق</option>
+                    <option value="4">A+</option>
+                    <option value="3.75">A</option>
+                    <option value="3.5">A-</option>
+                    <option value="3.25">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.75">B-</option>
+                    <option value="2.5">C+</option>
+                    <option value="2.25">C</option>
+                    <option value="2">C-</option>
+                    <option value="1.75">D+</option>
+                    <option value="1.5">D</option>
+                    <option value="0.75">F</option>
+                </select>
+                <button id="addCourse">+</button>
+            </div>
+        </div>
+        <button id="calculateSemesterGPA">حساب المعدل الفصلي</button>
+        <button id="calculateCumulativeGPA">حساب المعدل التراكمي</button>
+        <div class="result-container">
+            <div class="result-box">
+                <h2><i class="fa fa-graduation-cap"></i> المعدل الفصلي</h2>
+                <span id="semesterGPAResult">0</span>
+                <p> :الساعات الداخلة في حساب المعدل الفصلي </p>
+                <p id="semesterTotalHours">0</p>
+                <p> التقدير :<span id="semesterRating">-</span></p>
+            </div>
+            <div class="result-box">
+                <h2><i class="fa fa-bar-chart"></i> المعدل التراكمي</h2>
+                <span id="cumulativeGPAResult">0</span>
+                <p> :الساعات الداخلة في حساب المعدل التراكمي</p>
+                <p id="cumulativeTotalHours">0</p>
+                <p> التقدير :<span id="cumulativeRating">-</span></p>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br> <b><br><br><br>
+        <footer>
+            <ul class="imegaa">
+                <a href="توزيع نظام الرموز.jpeg" target="_blank">اضغط هنا لمعرفة نظام توزيع الرموز المعمول بها
+                    بالموقع<u> </u></a>
+                <br>
+                <a href="توزيع التقديرات.jpeg" target="_blank">اضغط هنا لمعرفة تقديرات الرموز </a>
+                <br>
+                <a href="خريطة الجامعة.jpeg" target="_blank">اضغط هنا لرؤية خريطة الجامعة </a>
+                <br>
+                <a href="دليل رموز المباني.jpeg" target="_blank">اضغط هنا لمعرفة دليل رموز المباني </a>
+                <br>
+                <a href="التقويم.jpeg" target="_blank">اضغط هنا لمعرفة التقويم الجامعي</a>
+                <br>
+                <a href="معدلات القبول.jpeg" target="_blank">اضغط هنا لمعرفة معدلات القبول في جامعة آل البيت لعام 2023
+                </a>
+                <br>
+                <a href="سعر الساعة.jpeg" target="_blank">اضغط هنا لمعرفة سعر الساعات في جامعة آل البيت </a>
+                <br>
+                <div class="notes-box">
+                    <h2>: الملاحظات</h2>
+                    <p> .الطلبة المستجدين عليهم بإدخال الرموز دون تعبئة المعدل التراكمي وعدد الساعات المقطوعة</p>
+                    <p> .ربما يكون هناك تقارب في حساب المعدل عند وجود مادة معادة لإختلاف خوارزميات الجامعة</p>
+                    <P>
+                    <h3> <b> <mark> .قام بإنشاء الموقع الطالب عدنان قازان من كلية تكنولوجيا المعلومات</mark></b></h3>
+                    </P>
+                    <a href=" https://www.facebook.com/nashama.aabu2016?mibextid=LQQJ4d">
+                        <h2 style="color:blue;"> كتلة النشامى - جامعة آل البيت </h2>
+                    </a>
+                    <div> <img src="شعار ابيض.jpeg" alt="" style="height: 50px; height: 100px;"></div>
+                </div>
+            </ul>
+        </footer>
+        <footer>
+            <div class="social-media">
+                <a href="https://www.facebook.com/faisaladnanqazan?mibextid=avESrC"><i class=" fa fa-facebook-square"
+                        style="font-size: 44px; color: cornflowerblue"></i></a>
+                <a href=" https://instagram.com/adnan_qazan?igshid=YTQwZjQ0NmI0OA=="><i class=" fa fa-instagram"
+                        style="font-size: 44px; color: deeppink;"></i></a>
+                <a href=" https://wa.me/+962778943258 "><i class=" fa fa-whatsapp"
+                        style="font-size: 44px; color: rgb(45, 128, 0);"> </i></a>
+                <a href="https://youtube.com/@adnanqazan2270?si=tfxZywfi4cG4B3eF "><i class=" fa fa-youtube-play"
+                        style="font-size: 44px; color: #ff0000cc;"> </i></a>
+                <a href="https://t.me/Adnanqazan"> <i class=" fa fa-telegram"
+                        style="font-size: 44px; color:rgb(100, 161, 242);"> </i></a>
+        </footer> <br>
+        <footer>
+            <p> عدنان قازان &copy; جميع الحقوق محفوظة</p>
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let previousGPAInput = document.querySelector(".previousGPA");
+                let completedHoursInput = document.querySelector(".completedHours");
+                let previousGradeSelect = document.querySelector(".previousGrade");
+                let courses = document.getElementById("courses");
+                let calculateSemesterButton = document.getElementById("calculateSemesterGPA");
+                let calculateCumulativeButton = document.getElementById("calculateCumulativeGPA");
+                let semesterGPAResultElement = document.getElementById("semesterGPAResult");
+                let cumulativeGPAResultElement = document.getElementById("cumulativeGPAResult");
+                let semesterTotalHoursElement = document.getElementById("semesterTotalHours");
+                let cumulativeTotalHoursElement = document.getElementById("cumulativeTotalHours");
+                let semesterRatingElement = document.getElementById("semesterRating");
+                let cumulativeRatingElement = document.getElementById("cumulativeRating");
+                let visitCount = localStorage.getItem("visitCount");
+
+                function updateSemesterGPA() {
+                    let previousGPA = parseFloat(previousGPAInput.value) || 0;
+                    let completedHours = parseFloat(completedHoursInput.value) || 0;
+                    let totalPoints = 0;
+                    let totalHours = 0;
+
+                    Array.from(courses.children).forEach(course => {
+                        let hours = parseFloat(course.querySelector(".hours").options[course.querySelector(".hours").selectedIndex].value);
+                        let grade = parseFloat(course.querySelector(".grade").value);
+                        totalPoints += hours * grade;
+                        totalHours += hours;
+                    });
+
+                    let semesterGPA = totalHours === 0 ? 0 : totalPoints / totalHours;
+                    semesterGPA = Math.min(4.0, semesterGPA);
+                    semesterGPA = Math.max(0, semesterGPA);
+
+                    semesterGPAResultElement.textContent = semesterGPA.toFixed(2);
+                    semesterTotalHoursElement.textContent = totalHours;
+
+                    updateRating(semesterGPA.toFixed(2), semesterRatingElement);
+                }
+
+                function updateCumulativeGPA() {
+                    let previousGPA = parseFloat(previousGPAInput.value) || 0;
+                    let completedHours = parseFloat(completedHoursInput.value) || 0;
+                    let totalPoints = previousGPA * completedHours;
+                    let totalHours = completedHours;
+
+                    Array.from(courses.children).forEach(course => {
+                        let hours = parseFloat(course.querySelector(".hours").options[course.querySelector(".hours").selectedIndex].value);
+                        let grade = parseFloat(course.querySelector(".grade").value);
+                        let previousCourseGrade = parseFloat(course.querySelector(".previousGrade").value);
+
+                        if (!isNaN(previousCourseGrade)) {
+                            let currentPoints = totalPoints - previousCourseGrade * hours;
+                            let currentHours = totalHours - hours;
+                            let gradeDifference = grade - previousCourseGrade;
+                            let additionalPoints = gradeDifference * hours;
+
+                            if (gradeDifference < 0) {
+                                currentPoints -= additionalPoints;
+                                currentHours -= hours;
+                            }
+
+                            totalPoints = currentPoints + grade * hours;
+                            totalHours = currentHours + hours;
+                        } else {
+                            totalPoints += hours * grade;
+                            totalHours += hours;
+                        }
+                    });
+
+                    let newGPA = totalHours === 0 ? 0 : totalPoints / totalHours;
+                    newGPA = Math.min(4.0, newGPA);
+                    newGPA = Math.max(0, newGPA);
+
+                    cumulativeGPAResultElement.textContent = newGPA.toFixed(2);
+                    cumulativeTotalHoursElement.textContent = totalHours;
+
+                    updateRating(newGPA.toFixed(2), cumulativeRatingElement);
+                }
+
+                function updateRating(gpa, ratingElement) {
+
+                    if (gpa >= 3.5 && gpa <= 4) {
+                        ratingElement.textContent = "امتياز";
+                    } else if (gpa >= 3 && gpa < 3.5) {
+                        ratingElement.textContent = "جيد جدا";
+                    } else if (gpa >= 2.5 && gpa < 3) {
+                        ratingElement.textContent = "جيد";
+                    } else if (gpa >= 2 && gpa < 2.5) {
+                        ratingElement.textContent = "مقبول";
+                    } else if (gpa < 2) {
+                        ratingElement.textContent = "ضعيف";
+                    }
+                }
+
+                calculateSemesterButton.addEventListener("click", updateSemesterGPA);
+                calculateCumulativeButton.addEventListener("click", updateCumulativeGPA);
+
+                courses.addEventListener("click", function (event) {
+                    if (event.target.classList.contains("deleteCourse")) {
+                        let courseElement = event.target.parentElement;
+                        courseElement.remove();
+                    }
+                });
+
+                let addCourseButton = document.getElementById("addCourse");
+
+                addCourseButton.addEventListener("click", function () {
+                    let newCourse = document.createElement("div");
+                    newCourse.className = "course";
+                    newCourse.innerHTML = `
+            <select class="hours">
+                <option value="">عدد الساعات </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <select class="grade">
+                <option value="4">A+</option>
+                <option value="3.75">A</option>
+                <option value="3.5">A-</option>
+                <option value="3.25">B+</option>
+                <option value="3">B</option>
+                <option value="2.75">B-</option>
+                <option value="2.5">C+</option>
+                <option value="2.25">C</option>
+                <option value="2">C-</option>
+                <option value="1.75">D+</option>
+                <option value="1.5">D</option>
+                <option value="0.75">F</option>
+            </select>
+            <select class="previousGrade">
+            <option >الرمز السابق</option>
+            <option value="4">A+</option>
+            <option value="3.75">A</option>
+            <option value="3.5">A-</option>
+            <option value="3.25">B+</option>
+            <option value="3">B</option>
+            <option value="2.75">B-</option>
+            <option value="2.5">C+</option>
+            <option value="2.25">C</option>
+            <option value="2">C-</option>
+            <option value="1.75">D+</option>
+            <option value="1.5">D</option>
+            <option value="0.75">F</option>
+        </select>
+        <button class="deleteCourse">-</button>  `;
+                    courses.appendChild(newCourse);
+                });
+            });
+
+            visitCount = visitCount ? parseInt(visitCount) : 0;
+            visitCount++;
+
+            // عرض قيمة العداد في عنصر div بدلاً من استخدام alert
+            document.getElementById("visitCountDisplay").innerHTML = "عدد الزوار: " + visitCount + "🔥";
+
+            localStorage.setItem("visitCount", visitCount.toString());
+        </script>
+</body>
+
+</html>
